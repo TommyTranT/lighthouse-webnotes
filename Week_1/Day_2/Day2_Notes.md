@@ -10,14 +10,20 @@ for (let number of args) => more readable loop, no index
 List steps to solve problem in english, not the syntax
 
 Step by step, rinse and repeat
+
 a) State the hypothesis
+
 b) Verify the hypothesis
+
 c) Make changes
 
 ## Github Notes
 Check what branch you are on: git branch
+
 Change branch name: git branch -M NewBranchName
+
 Creates and switches branch: git checkout -b NewbranchName
+
 Switches branches: git checkout NewBranchName
 
 ## Return the lowest value in an Array using Sort
