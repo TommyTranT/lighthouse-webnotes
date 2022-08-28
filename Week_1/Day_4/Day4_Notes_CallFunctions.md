@@ -291,10 +291,62 @@ console.log(result1);
 
 // We could remove the function and replace `doubleThatElement` with:
 const result1 = modifyArrayelements(someNumbersList, (element) => element * 2);
+
+// Dont need to write return cause its implied. 
 ```
 MAP is basically like our modifyArrayFunction
 
-## Complex
+## Complex Conditions
+Using Functions and refering to an Object as a condition. 
 
-1:46:00
+```js
+// 1. The object `someGrade` which represents my grades. I have an 80 in the subject math.
 
+// 2. Now we define our condtions for our 2 types of parents
+
+// 2(a). `strictParentApproval` will take an object `grade` and if grade.subject is history, it will return true (in our case, happy). If the grade scoreis greater than 95 they will be happy. If both of these are not met than false is returned. 
+
+// 2(b). `lenientParentApproval` will also take in our grade and as long as the grade.score is over 60, true will return. 
+
+// 3. Now our high order function `recieveParentJudgment` will take our object `grade` and our callback conditions (parents approvals) and if the parents approval return true, console log `GOOD JOB`. If it doesnt return true (so is false) than return `I AM DISSAPOINTED`.
+
+// 4. Now call our function to run it. 
+
+
+const someGrade = {score:80, subject:"Math"}
+
+const strictParentsApproval = grade => {
+  if (grade.subject === "history"){
+    return true
+  }
+
+  if (grade.score > 95){
+    return true
+  }
+
+  return false
+}
+
+const lenientParentApproval = grade => grade.score > 60
+
+const recieveParentJudgment = (grade, parent => {
+  if (parent(grade)) {
+    return console.log("GOOD JOB.");
+  }
+
+  return console.log("I AM DISSAPOINTED");
+})
+
+recieveParentJudgment(someGrade, strictParentApproval);
+// I AM DISSAPOINTED
+
+reciveParentJudgment(someGrade, lenientParentApproval);
+// GOOD JOB
+```
+## Recap
+Callback functions are a relationship between a higher order function and a normal function.
+
+Callback funtions can be
+a) an action (log, store, etc)
+b) a modifier (multiply, add, concatenate, etc)
+c) a condition (filtering, complex conditions)
