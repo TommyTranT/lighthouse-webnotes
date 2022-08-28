@@ -1,9 +1,9 @@
-## The 3 loops
+# The 3 loops
 1. C-style for loop: Classical, HAS index, works with anything
 2. For..of: for the element of the array
 3. For..in: for the key IN the object
 
-## Looping through Object and log each to console.
+# Looping through Object and log each to console.
 
 ```js
 // 1. Function has no parameters.
@@ -26,7 +26,7 @@ const loopOverNamesAndLogThem = () => {
 ```
 The problem with this code is that is is not reusable!
 
-## Making a function reusable
+# Making a function reusable
 
 Now by adding a parameter, the function will work for any Object with a list of names.
 ```js
@@ -44,7 +44,7 @@ loopOverNamesAndLogThem = (someFireToas);
 // Or print someIceToas instead
 ```
 
-## Adding a second parameter
+# Adding a second parameter
 
 What if we wanted to say bye instead of hi? 
 
@@ -75,7 +75,7 @@ loopOverNamesAndMessageThem = (someFireToas, "Bye");
 // Bye Jaller!
 ```
 
-## Change the second parameter into a Function
+# Change the second parameter into a Function
 
 Instead of a simple message, we can replace that parameter
 with another function.
@@ -113,7 +113,7 @@ Making them sing is a different function
 
 doSomething can be ANY OTHER FUNCTION. Making them sing is just an example.
 
-Here is our Function in basic terms
+## Here is our Function in basic terms
 ```js
 const action(element) {
   //action 
@@ -130,7 +130,7 @@ const forEachElement = function(array, action) {
 forEachElement(array, action)
 ```
 
-### Reasons it crashes
+## Reasons it crashes
 Take for example:
 `loopOverNamesAndDoSomething = (someFireToas, singHello);`
 
@@ -140,17 +140,17 @@ IF we do not input the second parameter it will crash because doSomething will b
 IF we try to use actual strings in the first parameter, it will crash because it is expecting an array.
 `loopOverNamesAndDoSomething = ({`Tahu, Vakama, Jaller`}, singHello);`
 
-### Higher Order Function
+## Higher Order Function
 
 The Function `loopOverNamesAndDoSomething` is considered a higher order function because it requires another function to run.
 
-### Callback Functions
+## Callback Functions
 
 The Function `singHello` is considered the callback functions of `loopOverNamesAndDoSomething`. 
 
 By itself it is not a callback. But in terms of `loopOverNamesAndDoSomething`, it is THE callback function of it.
 
-## ForEach
+# ForEach
 
 It is a method named For Each.
 
@@ -169,7 +169,20 @@ const logElement = (value, index, array) => {
 
 toaFire.forEach(logElement);
 ```
+## For Each with an if statement
+```js 
+// Lets say we only want to find Tahu in the array, we would have to have an if statement in our action function to use for each.
 
+const toaFire = ["Tahu", "Vakama", "Jaller"];
+
+const findAndLogElement = (value, index, array) => {
+  if (value === `Tahu`) {
+  console.log(`Found ${value} at ${index}`)
+  }
+}
+toaFire.forEach(findAndLogElement);
+
+```
 ## Anonymous Function
 
 A function we cant reference to. A function we can only use once.
