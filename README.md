@@ -10,8 +10,14 @@ This repository contains all of the notes taken by [Tommy](https://github.com/ha
 
 ## Table of Contents
 * [Week 1](/Week_1)
-  * [Day 1](/Week_1/Day_1/)
-  * [Day 2](/Week_1/Day_2/)
-  * [Day 3](/Week_1/Day_3/)
-  * [Day 4](/Week_1/Day_4/)
-  * [Day 5](/Week_1/Day_5/)
+  * [Day 1](/Week_1/Day_1/) - Process.argv
+  * [Day 2](/Week_1/Day_2/) - Scope
+  * [Day 3](/Week_1/Day_3/) - Objects
+  * [Day 4](/Week_1/Day_4/) - Call Functions
+  * [Day 5](/Week_1/Day_5/) - Recurrsions
+* [Week 2](/Week_2)
+  * [Day 1](/Week_2/Day_1/)
+  * [Day 2](/Week_2/Day_2/) - Asynchronous
+  * [Day 3](/Week_2/Day_3/) - Networking
+  * [Day 4](/Week_2/Day_4/) - Promises
+  * [Day 5](/Week_2/Day_5/) - Object Orientated
