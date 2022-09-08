@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just one bread</title>
+</head>
+<body>
+  <h1>Bread details</h1>
+  
+  <!-- Lets make a button to back to the homepage -->
+  <a href="/breads">Back to home page</a> <!-- Where do you want to go and what is this hyperlink called?-->
+
+  <!-- Display each breads detail based on bread key-->
+  <% if (bread) { %> <!-- If bread is truthy (the key is valid in our object)-->
+    <h2>Name: <%= bread.name %></h2> <!-- exp: bread is 'abcd' so abcd.name is 'rye' -->
+    <h2>Yeast: <%= bread.yeast %></h2>
+    <h2>Flour: <%= bread.flour %> </h2>
+    <h2>Expiry Date: <%= bread.expiryDate %> </h2>
+  <%} else {  %> 
+    <h2>No bread with that ID found</h2> 
+  <% } %> 
+
+</body>
+</html>

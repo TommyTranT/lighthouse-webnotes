@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit the bread</title>
+</head>
+<body>
+  <h1>Edit the <%= bread.name %> bread</h1>
+
+  <a href="/breads">Back to home</a>
+
+  <!-- Lets make a form to Edit an existing bread name. name is the most important to label -->
+  <!-- If you dont add action/method, it will redirect to same page like a google search--> 
+  <form action="/breads/<%= breadId %>" method="POST">  <!-- We want to POST in the breads/abcd page-->
+    <label>New bread name:</label>
+    <input 
+      name="newBreadName" 
+      value="<%= bread.name %>" 
+    />
+      <!-- name becomes the key of the value -->
+      <!-- if i inputed new bread name to = 'banh mi', -->
+      <!-- now the obj pair would be = newBreadName: 'banh mi' -->
+      <!-- value puts the name of bread in the edit bar -->
+    <button type="submit">Edit bread</button> <!-- Make button send request to server -->
+  </form>
+
+</body>
+</html>

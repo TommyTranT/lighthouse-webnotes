@@ -1,0 +1,34 @@
+<!-- Type '!' and you get premade format! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breads!</title> <!-- Tab / Bookmark / Shortcut Name-->
+</head>
+<body>
+  <h1>All the breads!</h1> 
+
+  <!-- Can console.log here to terminal -->
+  <!-- Can console.log locals to see ALL Data.-->
+
+  <!-- Lets display all of our items in the object through a loop -->
+  <% for (const breadKey in breads) {%> <!-- Looping through each Key in the object -->
+    <div class="bread">
+      <h2>Name: <%= breads[breadKey].name %> </h2> <!-- Outputting the name of each bread ([obj][key].name) -->
+      <h3>Yeast: <%= breads[breadKey].yeast %> Flour: <%= breads[breadKey].flour %></h3>
+      <h3>Expires on: <%= breads[breadKey].expiryDate %></h3>
+
+      <!-- Lets add a button to take you to each bread detail page -->
+      <a href="/breads/<%= breadKey %> ">Detail page</a> <!-- breadKey being the key like 'abcd'-->
+
+      <!-- Lets add a button that deletes the bread -->
+      <form action="/breads/<%= breadKey %>/delete" method="POST"> <!-- Button is in a form because we want to make a request, not a redirect-->
+        <button type="submit">Delete</button>
+      </form>
+    
+    </div>
+  <% } %> 
+</body>
+</html>
