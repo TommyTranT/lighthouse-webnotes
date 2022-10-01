@@ -41,6 +41,16 @@ let tail = function (arr) {
 console.log(tail([56,6,7,8,])); //prints out 6,7,8
 ```
 
+## Slice the last value in a string
+### kata/titleCase.js
+
+Useful for when a string has a space at the end we dont want
+```js
+newString = 'Hello There ' //==> Notice the empty space at the end
+result = newString.slice(0, -1);
+//==> 'Hello There'
+```
+
 ## A for loop that loops backwards
 ```javascript
 //js file named 'reverse.js'

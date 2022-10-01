@@ -1,0 +1,52 @@
+<!-- Index file refers to Main file -->
+<!-- Automatically loads when '/' (root) of page is visited -->
+<!-- (1) Link stylesheet (in same folder) to css the elements -->
+<!-- (2) Adding JQuery -->
+<!-- (3) Adding our script.js file into the html -->
+<!-- (4) An Empty 'container' that we can put all of our data in -->
+<!-- (5) MAKING OUR OWN DONUT! Need to give an id to put it in our render-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiments with AJAX!</title>
+
+  <!-- (2) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
+          integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer"></script>
+  
+
+  <!-- (1) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Using id to name things -->
+  <h1 id="title">Ajax!</h1>
+
+  <!-- (5) -->
+  <form id="new-donut">
+    <label>Name:</label>
+    <input name="name" />
+    <br />
+    <label>Filling:</label>
+    <input name="filling" />
+    <br />
+    <label>Flavour:</label>
+    <input name="flavour" />
+    <br />
+    <button type="submit">Create your donut!</button>
+    
+  </form>
+
+  <!-- (4) -->
+  <div id="container"></div>
+   <!-- (3) -->
+   <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* Refer to elements id with # */
+/* Refer to elements class with . */
+
+#title {
+  color: cornflowerblue;
+  background-color: lightcoral;
+  text-decoration: underline;
+}
+
+.donut {
+  border: 2px solid mediumorchid;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+}

@@ -280,3 +280,72 @@ const friedPotato = {
   }
 }
 ```
+
+# Finding the key based on the value
+```js
+// Function till get 2 parameters of (obj, value)
+// Return the key if value is equal to the obj.key.value
+
+const bestTVShowsByGenre = { 
+  sci_fi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama:  "The Wire"
+};
+
+const findKey = (obj,value ) => {
+// Loop through the object with object keys (scifi, comedy, drama)
+  for (const key in obj) {
+    if (obj[key] === value){   //<== if the keys (genres) is equal to the value parameter,
+      console.log( `Match!`)
+      return [key] // <== Return the key that matches!
+    }
+  }
+}
+
+console.log(findKey(bestTVShowsByGenre,"The Wire")); // 'drama'
+```
+# Get the number of obj keys in obj.
+```js
+const obj1Keys = Object.keys(object1).length;
+```
+
+# Compare objects by length and by the value
+
+```js
+const ab = {
+  a: "1",
+  b: "2",
+}
+const ba = {
+  b: "2",
+  a: "1",
+}
+const abc = {
+  a: "1",
+  b: "2",
+  c: "3",
+}
+
+const eqObjects = (object1, object2) => {
+  const obj1Keys = Object.keys(object1).length; 
+  const obj2Keys = Object.keys(object2).length;
+  const keys1 = Object.keys(object1);
+  const keys2 = Object.keys(object2);
+  if (obj1Keys !== obj2Keys) {
+    return false
+  }
+  for (let key of keys1) {
+    if (object1[key] !== object2[key]) {
+      return false;
+    }
+  }
+  return true
+}
+
+
+console.log(eqObjects(ab, ba)); // => true
+console.log(eqObjects(ab, abc)); // => false
+
+// * Help from website below
+// https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#:~:text=JavaScript%20provides%203%20ways%20to,Object.is()%20function
+```

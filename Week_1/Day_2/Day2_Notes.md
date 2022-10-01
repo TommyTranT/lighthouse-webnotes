@@ -143,3 +143,27 @@ for (let j = 0; j < numOfRolls; j++) {
 // Print the results
 console.log("Rolled", numOfRolls,"dice:", results);
 ```
+
+## Global and Local Scope
+### Scoping Can Overwrite Variables
+What if there's both a global variable and a local variable defined with the same name, as shown below
+
+```javascript
+let myVar = "global";
+
+const myFunction = function() {
+  let myVar = "local";
+
+  console.log("inside myFunction, myVar is:", myVar); 
+}
+
+myFunction();
+
+console.log("outside myFunction, myVar is:", myVar);  
+```
+The local variable myVar takes precedence inside myFunction. It would evaluate to "local"
+
+However outside the function the variable myVar behaves as a global variable. It would evaluate to "global"
+
+ [More Reading](https://web.compass.lighthouselabs.ca/24f1bd66-2566-404b-9784-84d353e6567a)
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Page</title>
+
+  <!-- Required for JQuery -->
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" 
+    integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+  </script>
+
+</head>
+<body>
+  <h1>Welcome to my page!</h1>
+  <div class="content">
+    <!-- Making a new DIV: Required -->
+    <div>
+      <label>New List Item:</label>
+      <input id="new-list-item" />
+      <button id="add-new-list-item">Add new!!</button>
+    </div>
+    
+    <p>My Favorite Numbers</p>
+    <ul id="main-list">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+  </div>
+    <!-- Order Matters. Cant call something that doesnt exist yet -->
+    <script src="/static/client2.js"></script>
+    <script src="/static/client.js"></script>
+
+</body>
+</html>
