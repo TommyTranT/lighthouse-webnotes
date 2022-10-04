@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header';
+import Counter from './components/Counter';
 
 const App = () => {
   return (
@@ -10,10 +11,7 @@ const App = () => {
         message="This is the homepage!"
       ></Header>
 
-      <Header
-        message="These are all the products"
-      ></Header>
-
+    <Counter />
     </div>
   );
 };
